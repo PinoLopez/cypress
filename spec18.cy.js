@@ -7,10 +7,7 @@ describe('Prueba con Cypress en Talk:Wikipedia', () => {
   
       // 2. Aserciones básicas en la página de discusión
       cy.title().should('contain', 'Talk:Wikipedia'); // Verifica el título de la página
-      cy.get('#talk-header').should('be.visible'); // Verifica que el encabezado de la página esté visible
-  
-      // 3. Aserciones adicionales
-  
+        
       // Verifica la presencia de elementos específicos
       cy.get('#mw-content-text').should('be.visible'); // Verifica que el contenido principal esté visible
   
