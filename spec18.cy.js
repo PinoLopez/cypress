@@ -1,5 +1,7 @@
-describe('Prueba con Cypress en Talk:Wikipedia', () => {
-    it('Navega a la página de discusión de Wikipedia', () => {
+describe('Prueba con Cypress en Talk:Wikipedia', () => 
+  {
+    it('Navega a la página de discusión de Wikipedia', () => 
+      {
       cy.visit('https://en.wikipedia.org/wiki/Talk:Wikipedia');
   
       // 1. Verifica que la URL final sea la correcta 
@@ -12,12 +14,13 @@ describe('Prueba con Cypress en Talk:Wikipedia', () => {
       cy.get('#mw-content-text').should('be.visible'); // Verifica que el contenido principal esté visible
   
       // Busca texto específico dentro de un elemento
-      cy.get('#mw-content-text').within(() => {
+      cy.get('#mw-content-text').within(() => 
+        {
         cy.contains('Wikipedia').should('be.visible'); // Verifica si el texto "Wikipedia" está presente
         cy.contains('This talk page is only for discussions concerning the improvement').should('be.visible');
       });
   
-      // Verifica la presencia de enlaces
+      // Verifica enlaces
       cy.get('a').should('have.attr', 'href'); // Verifica que todos los enlaces tengan el atributo href
   
       // Verifica la cantidad de elementos 

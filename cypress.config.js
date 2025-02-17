@@ -1,4 +1,4 @@
-const { defineConfig } = require('cypress'); // Se requiere solo una vez, afuera
+const { defineConfig } = require('cypress'); // Se requiere solo una vez
 
 module.exports = defineConfig(
   {
@@ -6,9 +6,9 @@ module.exports = defineConfig(
   {
     setupNodeEvents(on, config)
      {
-      // implement node event listeners here (si es necesario)
+      // implement node event listeners here 
     },
-    supportFile: false, // Deshabilita el archivo de soporte (si es necesario)
+    supportFile: false, // Deshabilita el archivo de soporte 
     specPattern: 'spec*.cy.js',  // para todos los archivos
   },
 }); // Cierra el objeto de configuración y el llamado a defineConfig
